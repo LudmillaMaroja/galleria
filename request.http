@@ -1,0 +1,153 @@
+@token = {{login.response.body.token}}
+@host = http://localhost:3000
+
+### Create Food
+
+POST {{host}}/dinos
+Authorization: bearer {{token}}
+Content-Type: multipart/form-data; boundary="boundary"
+
+--boundary
+Content-Disposition: form-data; name="name"
+
+dino1
+--boundary
+Content-Disposition: form-data; name="image"; filename="milkshake.jpg"
+Content-Type: image/jpeg
+
+< ./public/imgs/foods/milkshake.jpg
+--boundary
+Content-Disposition: form-data; name="height"
+
+15
+--boundary
+Content-Disposition: form-data; name="weight"
+
+8000
+--boundary
+Content-Disposition: form-data; name="period_id"
+
+2
+--boundary
+Content-Disposition: form-data; name="description"
+
+aaaaaaaaaaaaaaaaaaaa
+--boundary--
+
+### Create Food
+
+PUT {{host}}/posts/3
+Authorization: bearer {{token}}
+Content-Type: multipart/form-data; boundary="boundary"
+
+--boundary
+Content-Disposition: form-data; name="title"
+
+stayc girls
+--boundary
+Content-Disposition: form-data; name="image"; filename="abapiru.jpeg"
+Content-Type: image/jpeg
+
+< ./public/imgs/foods/abapiru.jpeg
+--boundary
+Content-Disposition: form-data; name="type_id"
+
+1
+--boundary
+Content-Disposition: form-data; name="date"
+
+1999-10-10
+--boundary
+Content-Disposition: form-data; name="description"
+
+this is what i am lookin for 
+3 2 1 go!
+poppy poppy pop poppy poppy poppy love love
+poppy poppy pop poppy poppy poppy love love
+poppy poppy pop poppy poppy poppy love love
+poppy poppy pop poppy poppy poppy love love
+--boundary--
+
+### Read Foods
+
+GET {{host}}/foods
+Authorization: bearer {{token}}
+
+### Update Food
+
+PUT {{host}}/foods/3
+Authorization: bearer {{token}}
+Content-Type: multipart/form-data; boundary="boundary"
+
+--boundary
+Content-Disposition: form-data; name="name"
+
+Milkshake
+--boundary
+Content-Disposition: form-data; name="price"
+
+12.5
+--boundary
+Content-Disposition: form-data; name="category_id"
+
+2
+--boundary
+Content-Disposition: form-data; name="image"; filename="milkshake.jpg"
+Content-Type: image/jpeg
+
+< ./public/imgs/foods/milkshake.jpg
+--boundary--
+
+### Delete Food
+
+DELETE {{host}}/foods/4
+Authorization: bearer {{token}}
+
+### Read Categories
+
+GET {{host}}/categories
+Authorization: bearer {{token}}
+
+### Create User
+
+POST {{host}}/users
+Content-Type: application/json
+
+{
+    "name": "Milla",
+    "email": "milla@email.com",
+    "password": "12345678"
+}
+
+### Valid Login
+
+# @name login
+POST {{host}}/signin
+Content-Type: application/json
+
+{
+    "email": "milla@email.com",
+    "password": "12345678"
+}
+
+### Invalid Login
+
+POST {{host}}/signin
+Content-Type: application/json
+
+{
+    "email": "fail@email.com",
+    "password": "123"
+}
+
+### Create Order
+GET {{host}}/index
+Authorization: bearer {{token}}
+
+### Create Order
+GET {{host}}/notes/4
+Authorization: bearer {{token}}
+
+### Create Order
+GET {{host}}/types
+Authorization: bearer {{token}}

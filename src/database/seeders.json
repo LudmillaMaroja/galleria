@@ -1,0 +1,48 @@
+{
+  "types": [
+    {
+      "id": 1,
+      "name": "Desenho"
+    },
+    {
+      "id": 2,
+      "name": "Fotográfia"
+    },
+    {
+      "id": 3,
+      "name": "Pintura"
+    },
+    {
+      "id": 4,
+      "name": "Série/Filme"
+    },
+    {
+      "id": 5,
+      "name": "Livro/Citação"
+    },
+    {
+      "id": 6,
+      "name": "Nota"
+    },
+    {
+      "id": 7,
+      "name": "Outro"
+    }
+  ],
+  "posts": [
+    {
+      "title": "Abapiru (Exemplo de post)",
+      "date": "2005-05-26",
+      "description": "Exemplo de post a ser criado. Pode apagá-lo quando quiser.",
+      "image": "/imgs/foods/abapiru.jpeg",
+      "type_id": 3
+    },
+    {
+      "title": "Batata frita",
+      "date": "2005-05-26",
+      "description": "Exemplo de post a ser criado. Pode apagá-lo quando quiser.",
+      "image": "/imgs/foods/milkshake.jpg",
+      "type_id": 7
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+
+title, nav, .container h1{
+    font-family: 'Titillium Web', sans-serif;
+
+}
+
+input#titulo, textarea.message:focus{
+    outline: none;
+    transition: all 0.5s ease-in-out;
+}
+
+input#titulo:focus, textarea.message:focus{
+    background-color: rgba(197, 197, 197, 0.1);
+    outline: none!important;
+    box-shadow: none !important;
+}
+
+.card figure.figura{
+    height: 200px !important;
+    width: 100%;
+    overflow: hidden;
+}
+
+nav.navbar {
+    background-color: #F6B6B6!important;
+    color: #061208 !important;
+}
+
+.title-img{
+    height: 55px;
+    width: 55px;
+    /* object-fit: cover; */
+}
+
+.btn-light{
+    background-color: #F9C8C8!important;
+}
+
+.subDestaque{
+    background-color: #F9C8C8!important;
+    
+}
